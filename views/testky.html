@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>正在进行跨域请求测试</p>
+
+<script>
+    //XMLHttpRequest cannot load http://api.botue.com/login. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://studyit.com' is therefore not allowed access.
+
+    //出现上述报错信息，就说明就跨域请求被阻止 了
+    // get 用于查询或是分享网址
+
+    var xhr=new XMLHttpRequest();
+    xhr.open("post",'http://study.com/api/login');
+    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    xhr.send('tc_name=前端学院&tc_pass=123456');
+    /*{"code":200,"msg":"登录成功!","result":{"tc_name":"前端学院","tc_avatar":""},"time":1497793417}*/
+</script>
+</body>
+</html>
